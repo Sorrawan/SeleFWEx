@@ -16,4 +16,19 @@
       </class> <!-- com.herokuapp.theinternet.NegativeTests -->
     </classes>
   </test> <!-- NegativeUsernameTest-FF(failed) -->
+  <test thread-count="5" name="NegativePasswordTest-FF(failed)">
+    <parameter name="password" value="incorrectPassword"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="expectedMessage" value="Your password is invalid!"/>
+    <parameter name="username" value="tomsmith"/>
+    <classes>
+      <class name="com.herokuapp.theinternet.NegativeTests">
+        <methods>
+          <include name="negativeTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.herokuapp.theinternet.NegativeTests -->
+    </classes>
+  </test> <!-- NegativePasswordTest-FF(failed) -->
 </suite> <!-- Failed suite [NegativeTestSuite] -->
